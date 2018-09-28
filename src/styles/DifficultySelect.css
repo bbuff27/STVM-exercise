@@ -1,0 +1,13 @@
+section {
+  color: yellow;
+}
+
+button {
+  background-color: yellow;
+  height: 30px;
+  width: 60px;
+  font-weight: 900;
+  font-size: 14px;
+  border-radius: 10%;
+  outline: none;
+}
