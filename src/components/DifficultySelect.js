@@ -4,11 +4,20 @@ import '../styles/DifficultySelect.css';
 
 class DifficultySelect extends PureComponent {
 	render() {
-		const { allDifficulties } = this.props;
+		const {
+			allDifficulties,
+			setActiveDifficulty,
+			activeDifficulty
+		} = this.props;
 		return (
 			<section className="difficulty-select">
 				{allDifficulties.map(difficulty => (
-					<Difficulty difficulty={difficulty} />
+					<Difficulty
+						difficulty={difficulty}
+						setActiveDifficulty={setActiveDifficulty}
+						activeDifficulty={activeDifficulty}
+						key={difficulty.description}
+					/>
 				))}
 				<button type="button" onClick={this.handleDisplay}>
 					Flash

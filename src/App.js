@@ -13,10 +13,16 @@ class App extends Component {
 	}
 
 	setActiveDifficulty = e => {
-		console.log(e.target);
-		// //TODO: Will have to make sure this variable is valid when completing input
-		// const selectedDifficulty = e.input.id;
-		// this.setState({ activeDifficulty: selectedDifficulty });
+		const { value: difficulty } = e.target;
+		const { activeDifficulty } = this.state;
+		if (difficulty !== activeDifficulty) {
+			this.setState({ activeDifficulty: difficulty });
+		}
+		return null;
+	};
+
+	handleShowLetters = () => {
+		this.setState({ displayLetters: true });
 	};
 
 	render() {
